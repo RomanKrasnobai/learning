@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = 'utf-8'>
+<title>test page2</title>
+</head>
+<body>
+<script type = 'text/javascript'>
+
+function camelize(str) {
+
+var arr = str.split('-');
+    
+    for (var i = 1; i < arr.length; i++) {
+	 arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+  return arr.join('');
+}
+
+alert( camelize('go-do-po') );
+// пришлось чучуть подсмотреть,очень хотел его решить
+</script>
+</body>
+</html>

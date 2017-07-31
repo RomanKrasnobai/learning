@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = 'utf-8'>
+<title>test page7</title>
+</head>
+<body>
+<script type = 'text/javascript'>
+
+/*
+var arr = [1, 2, 3, 4, 5];
+
+sorting();
+
+function sorting() {
+ var rand = Math.floor(Math.random() * arr.length); //вставить рандом додумался сам,как приминить не додумался
+     sort(arr[rand]);
+ alert(arr); 
+ //--- мой код(неправильный)
+}
+*/
+
+function compareRandom(a, b) {
+  return Math.random() - 0.5;
+}
+
+var arr = [1, 2, 3, 4, 5];
+arr.sort(compareRandom);
+
+alert( arr ); // элементы в случайном порядке, например [3,5,1,2,4]
+
+</script>
+</body>
+</html>
