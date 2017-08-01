@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = 'utf-8'>
+<title>test page1</title>
+</head>
+<body>
+<script type = 'text/javascript'>
+
+function addClass(obj, cls) {
+	var clas1 = obj.className ? obj.className.split(' ') : []; 
+	for (var i = 0; i < clas1.length; i++) {
+		
+		if (clas1[i] == cls) return;
+	}
+	
+ clas1.push(cls);
+ obj.className = clas1.join(' ');
+ 
+}
+
+var obj = {
+	className: 'open menu'
+};
+
+addClass(obj, 'new');
+alert(obj.className);
+// решил не чисто,пришлось малеха подглянуть алгоритм
+</script>
+</body>
+</html>

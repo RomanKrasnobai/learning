@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = 'utf-8'>
+<title>test page 3</title>
+</head>
+<body>
+<script type = 'text/javascript'>
+
+function removeClass(obj, cls) {
+    var clas1 = obj.className.split(' ');
+
+    for (var i = 0; i < clas1.length; i++) {
+        
+        if (clas1[i] == cls) {
+         clas1.splice(i, 1);
+         return clas1;
+        }
+    }
+  
+  obj.className = clas1.join(' ');
+}
+
+var obj = {
+	className: 'open menu'
+};
+
+alert( removeClass(obj, 'menu') );
+
+
+</script>
+</body>
+</html>
