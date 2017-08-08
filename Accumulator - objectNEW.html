@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = 'utf-8'>
+<title>Calculator 'This'</title>
+</head>
+<body>
+<script type = 'text/javascript'>
+
+function Accumulator(startingValue) {
+    
+    this.value = startingValue;
+     
+    this.read = function() {
+        
+        var a = +prompt('enter num');
+        
+        alert(a + this.value);
+    }
+
+
+}
+
+var accumulator = new Accumulator(1);
+accumulator.read();
+alert(accumulator.value);
+
+</script>
+</body>
+</html>
