@@ -15,10 +15,8 @@ function Accumulator(startingValue) {
         
         var a = +prompt('enter num');
         
-        alert(a + this.value);
+        this.value = a + this.value;
     }
-
-
 }
 
 var accumulator = new Accumulator(1);
