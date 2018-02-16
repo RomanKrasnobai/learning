@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">Participant</div>
+            <div class="panel-body">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label>Name*</label>
+                            <input required type="text" class="form-control" id="name" placeholder="Please enter name">
+                        </div>
+                        <div class="form-group">
+                            <label>Surname*</label>
+                            <input required type="text" class="form-control" id="surname" placeholder="Please enter surname">
+                        </div>
+                        <div class="form-group">
+                            <label>Email*</label>
+                            <input required type="email" class="form-control" id="email" placeholder="Please enter email">
+                        </div>
+                        <div>
+                            <input class="btn btn-info" id="addParticipant" type="submit" value="Add Participant" onclick="lottery.addParticipant();" />
+                            <button onclick="lottery.showWinner();  return false;" class="btn btn-info">Show Winner</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 style="text-align: center">Participants</h3>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Email</th>
+				</tr>
+            </thead>
+            <tbody id="participants"></tbody>
+        </table>
+        <h3 id="winner"></h3>
+    </div>
+
+
+    <script type="text/javascript" src="lottery.js"></script>
+</body>
+</html>
